@@ -14,7 +14,7 @@ import hashlib
 import base64
 import datetime
 import json
-from xmltojson import xmltojson
+from .xmltojson import xmltojson
 from xml.dom import minidom 
 
 try:

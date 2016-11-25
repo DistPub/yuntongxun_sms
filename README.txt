@@ -1,3 +1,21 @@
+#NOTICE
+
+the sdk comes from official, here to do below chagnes:
+
+1. improve it's compatibility to python3.5
+1. provide package installable ability
+
+#INSTALL
+
+```
+python setup.py install
+```
+
+#USAGE
+
+```
+from yuntongxun_sms.CCPRestSDK import REST as SMSSDK
+```
 
 ====================当前版本信息====================
 当前版本：v2.7
