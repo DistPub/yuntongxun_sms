@@ -776,7 +776,7 @@ class REST:
             print('172004');
             print('IP为空');
         
-        if(self.ServerPort<=0):
+        if(int(self.ServerPort)<=0):
             print('172005');
             print('端口错误（小于等于0）');
         
