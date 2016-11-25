@@ -1,1 +1,5 @@
 .idea
+*.pyc
+build
+dist
+yuntongxun_sms.egg-info
