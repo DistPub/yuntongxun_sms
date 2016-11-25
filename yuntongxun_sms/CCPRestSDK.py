@@ -121,7 +121,7 @@ class REST:
 
         try:
             res = urlopen(req);
-            data = res.read()
+            data = res.read().decode()
             res.close()
 
             if self.BodyType=='json':
@@ -177,7 +177,7 @@ class REST:
 
         try:
             res = urlopen(req);
-            data = res.read()
+            data = res.read().decode()
             res.close()
 
             if self.BodyType=='json':
@@ -234,7 +234,7 @@ class REST:
 
         try:
             res = urlopen(req);
-            data = res.read()
+            data = res.read().decode()
             res.close()
 
             if self.BodyType=='json':
@@ -297,7 +297,7 @@ class REST:
         data=''
         try:
             res = urlopen(req);
-            data = res.read()
+            data = res.read().decode()
             res.close()
 
             if self.BodyType=='json':
@@ -365,7 +365,7 @@ class REST:
         data=''
         try:
             res = urlopen(req);
-            data = res.read()
+            data = res.read().decode()
             res.close()
 
             if self.BodyType=='json':
@@ -426,7 +426,7 @@ class REST:
         data=''
         try:
             res = urlopen(req);
-            data = res.read()
+            data = res.read().decode()
             res.close()
 
             if self.BodyType=='json':
@@ -482,7 +482,7 @@ class REST:
         data=''
         try:
             res = urlopen(req);
-            data = res.read()
+            data = res.read().decode()
             res.close()
             xtj=xmltojson()
             locations=xtj.main(data)
@@ -532,7 +532,7 @@ class REST:
         data=''
         try:
             res = urlopen(req);
-            data = res.read()
+            data = res.read().decode()
 
             res.close()
 
@@ -574,7 +574,7 @@ class REST:
         data=''
         try:
             res = urlopen(req);
-            data = res.read()
+            data = res.read().decode()
             res.close()
 
             if self.BodyType=='json':
@@ -628,7 +628,7 @@ class REST:
         data=''
         try:
             res = urlopen(req);
-            data = res.read()
+            data = res.read().decode()
             res.close()
 
             if self.BodyType=='json':
@@ -671,7 +671,7 @@ class REST:
         data=''
         try:
             res = urlopen(req);
-            data = res.read()
+            data = res.read().decode()
             res.close()
 
             if self.BodyType=='json':
@@ -725,7 +725,7 @@ class REST:
         data=''
         try:
             res = urlopen(req);
-            data = res.read()
+            data = res.read().decode()
 
             res.close()
 
@@ -780,7 +780,7 @@ class REST:
 
         try:
             res = urlopen(req);
-            data = res.read()
+            data = res.read().decode()
 
             res.close()
 
