@@ -122,7 +122,7 @@ class REST:
             if self.Iflog:
                 self.log(url,body,data)
             return locations
-        except Exception, error:
+        except Exception as error:
             if self.Iflog:
                 self.log(url,body,data)
             return {'172001':'网络错误'}
@@ -172,7 +172,7 @@ class REST:
             if self.Iflog:
                 self.log(url,body,data)
             return locations
-        except Exception, error:
+        except Exception as error:
             if self.Iflog:
                 self.log(url,body,data)
             return {'172001':'网络错误'}
@@ -223,7 +223,7 @@ class REST:
             if self.Iflog:
                 self.log(url,body,data)
             return locations
-        except Exception, error:
+        except Exception as error:
             if self.Iflog:
                 self.log(url,body,data)
             return {'172001':'网络错误'}
@@ -280,7 +280,7 @@ class REST:
             if self.Iflog:
                 self.log(url,body,data)
             return locations
-        except Exception, error:
+        except Exception as error:
             if self.Iflog:
                 self.log(url,body,data)
             return {'172001':'网络错误'}
@@ -342,7 +342,7 @@ class REST:
             if self.Iflog:
                 self.log(url,body,data)
             return locations
-        except Exception, error:
+        except Exception as error:
             if self.Iflog:
                 self.log(url,body,data)
             return {'172001':'网络错误'}
@@ -399,7 +399,7 @@ class REST:
             if self.Iflog:
                 self.log(url,body,data)
             return locations
-        except Exception, error:
+        except Exception as error:
             if self.Iflog:
                 self.log(url,body,data)
             return {'172001':'网络错误'}
@@ -445,7 +445,7 @@ class REST:
             if self.Iflog:
                 self.log(url,body,data)
             return locations
-        except Exception, error:
+        except Exception as error:
             if self.Iflog:
                 self.log(url,body,data)
             return {'172001':'网络错误'}
@@ -497,7 +497,7 @@ class REST:
             if self.Iflog:
                 self.log(url,body,data)
             return locations
-        except Exception, error:
+        except Exception as error:
             if self.Iflog:
                 self.log(url,body,data)
             return {'172001':'网络错误'}
@@ -537,7 +537,7 @@ class REST:
             if self.Iflog:
                 self.log(url,body,data)
             return locations
-        except Exception, error:
+        except Exception as error:
             if self.Iflog:
                 self.log(url,body,data)
             return {'172001':'网络错误'}
@@ -587,7 +587,7 @@ class REST:
             if self.Iflog:
                 self.log(url,body,data)
             return locations
-        except Exception, error:
+        except Exception as error:
             if self.Iflog:
                 self.log(url,body,data)
             return {'172001':'网络错误'}
@@ -629,7 +629,7 @@ class REST:
             if self.Iflog:
                 self.log(url,body,data)
             return locations
-        except Exception, error:
+        except Exception as error:
             if self.Iflog:
                 self.log(url,body,data)
             return {'172001':'网络错误'}
@@ -680,7 +680,7 @@ class REST:
             if self.Iflog:
                 self.log(url,body,data)
             return locations
-        except Exception, error:
+        except Exception as error:
             if self.Iflog:
                 self.log(url,body,data)
             return {'172001':'网络错误'}
@@ -732,7 +732,7 @@ class REST:
             if self.Iflog:
                 self.log(url,body,data)
             return locations
-        except Exception, error:
+        except Exception as error:
             if self.Iflog:
                 self.log(url,body,data)
             return {'172001':'网络错误'}
