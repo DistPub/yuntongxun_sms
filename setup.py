@@ -7,7 +7,7 @@ setup(
     name='yuntongxun_sms',
     description='python sdk to use yuntongxun sms service',
     url='https://github.com/ugoodspeed/yuntongxun_sms',
-    version='2.7.3',
+    version='2.7.4',
 
     platforms='linux',
     classifiers=[

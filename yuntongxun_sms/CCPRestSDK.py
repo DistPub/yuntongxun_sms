@@ -13,7 +13,6 @@
 import hashlib
 import base64
 import datetime
-import urllib2
 import json
 from xmltojson import xmltojson
 from xml.dom import minidom 
