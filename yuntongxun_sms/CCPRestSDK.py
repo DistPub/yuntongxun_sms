@@ -113,7 +113,12 @@ class REST:
             #json格式
             body = '''{"friendlyName": "%s", "appId": "%s"}'''%(friendlyName,self.AppId)
         data=''
-        req.add_data(body)
+
+        try:
+            req.add_data(body)
+        except AttributeError:
+            req.data = body
+
         try:
             res = urlopen(req);
             data = res.read()
@@ -163,7 +168,12 @@ class REST:
             #json格式 
             body = '''{"appId": "%s", "startNo": "%s", "offset": "%s"}'''%(self.AppId,startNo,offset)
         data=''
-        req.add_data(body)
+
+        try:
+            req.add_data(body)
+        except AttributeError:
+            req.data = body
+
         try:
             res = urlopen(req);
             data = res.read()
@@ -214,7 +224,12 @@ class REST:
             
             body = '''{"friendlyName": "%s", "appId": "%s"}'''%(friendlyName,self.AppId)
         data=''
-        req.add_data(body)
+
+        try:
+            req.add_data(body)
+        except AttributeError:
+            req.data = body
+
         try:
             res = urlopen(req);
             data = res.read()
@@ -270,7 +285,12 @@ class REST:
                 b+='"%s",'%(a) 
             b+=']'
             body = '''{"to": "%s", "datas": %s, "templateId": "%s", "appId": "%s"}'''%(to,b,tempId,self.AppId)
-        req.add_data(body)
+
+        try:
+            req.add_data(body)
+        except AttributeError:
+            req.data = body
+
         data=''
         try:
             res = urlopen(req);
@@ -332,7 +352,12 @@ class REST:
             '''%(to, mediaName,mediaTxt,self.AppId,displayNum,playTimes,respUrl,userData,maxCallTime,speed,volume,pitch,bgsound)
         if self.BodyType == 'json':   
             body = '''{"to": "%s", "mediaName": "%s","mediaTxt": "%s","appId": "%s","displayNum": "%s","playTimes": "%s","respUrl": "%s","userData": "%s","maxCallTime": "%s","speed": "%s","volume": "%s","pitch": "%s","bgsound": "%s"}'''%(to, mediaName,mediaTxt,self.AppId,displayNum,playTimes,respUrl,userData,maxCallTime,speed,volume,pitch,bgsound)
-        req.add_data(body)
+
+        try:
+            req.add_data(body)
+        except AttributeError:
+            req.data = body
+
         data=''
         try:
             res = urlopen(req);
@@ -389,7 +414,10 @@ class REST:
         if self.BodyType == 'json':   
             # if this model is Json ..then do next code 
             body = '''{"appId": "%s", "verifyCode": "%s","playTimes": "%s","to": "%s","respUrl": "%s","displayNum": "%s","lang": "%s","userData": "%s"}'''%(self.AppId,verifyCode,playTimes,to,respUrl,displayNum,lang,userData)
-        req.add_data(body)
+        try:
+            req.add_data(body)
+        except AttributeError:
+            req.data = body
         data=''
         try:
             res = urlopen(req);
@@ -441,7 +469,10 @@ class REST:
                     <Dial number="%s"  userdata="%s" record="%s"></Dial>
                 </Request>
             '''%(self.AppId,number,userdata,record)
-        req.add_data(body)
+        try:
+            req.add_data(body)
+        except AttributeError:
+            req.data = body
         data=''
         try:
             res = urlopen(req);
@@ -486,7 +517,11 @@ class REST:
         if self.BodyType == 'json':   
             # if this model is Json ..then do next code 
             body = '''{"appId": "%s", "date": "%s","keywords": "%s"}'''%(self.AppId,date,keywords)
-        req.add_data(body)
+        try:
+            req.add_data(body)
+        except AttributeError:
+            req.data = body
+
         data=''
         try:
             res = urlopen(req);
@@ -577,7 +612,10 @@ class REST:
         if self.BodyType == 'json':   
             # if this model is Json ..then do next code 
             body = '''{"appId": "%s", "templateId": "%s"}'''%(self.AppId,templateId)
-        req.add_data(body)
+        try:
+            req.add_data(body)
+        except AttributeError:
+            req.data = body
         data=''
         try:
             res = urlopen(req);
@@ -669,7 +707,10 @@ class REST:
         if self.BodyType == 'json':   
             # if this model is Json ..then do next code 
             body = '''{"Appid":"%s","QueryCallState":{"callid":"%s","action":"%s"}}'''%(self.AppId,callid,action)
-        req.add_data(body)
+        try:
+            req.add_data(body)
+        except AttributeError:
+            req.data = body
         data=''
         try:
             res = urlopen(req);
@@ -719,9 +760,11 @@ class REST:
             req.add_header("Content-Type", "application/octet-stream")
 
         
-        #创建包体        
-        req.add_data(body)
-
+        #创建包体
+        try:
+            req.add_data(body)
+        except AttributeError:
+            req.data = body
 
         try:
             res = urlopen(req);
