@@ -10,7 +10,7 @@
     #  in the file PATENTS.  All contributing project authors may
     #  be found in the AUTHORS file in the root of the source tree.
 
-import md5
+import hashlib
 import base64
 import datetime
 import urllib2
@@ -87,7 +87,7 @@ class REST:
         self.Batch = nowdate.strftime("%Y%m%d%H%M%S")
         #生成sig
         signature = self.AccountSid + self.AccountToken + self.Batch;
-        sig = md5.new(signature).hexdigest().upper()
+        sig = hashlib.md5(signature).hexdigest().upper()
         #拼接URL
         url = "https://"+self.ServerIP + ":" + self.ServerPort + "/" + self.SoftVersion + "/Accounts/" + self.AccountSid + "/SubAccounts?sig=" + sig
         #生成auth
@@ -137,7 +137,7 @@ class REST:
         self.Batch = nowdate.strftime("%Y%m%d%H%M%S")
         #生成sig
         signature = self.AccountSid + self.AccountToken + self.Batch;
-        sig = md5.new(signature).hexdigest().upper()
+        sig = hashlib.md5(signature).hexdigest().upper()
         #拼接URL
         url = "https://"+self.ServerIP + ":" + self.ServerPort + "/" + self.SoftVersion + "/Accounts/" + self.AccountSid + "/GetSubAccounts?sig=" + sig
         #生成auth
@@ -187,7 +187,7 @@ class REST:
         self.Batch = nowdate.strftime("%Y%m%d%H%M%S")
         #生成sig
         signature = self.AccountSid + self.AccountToken + self.Batch;
-        sig = md5.new(signature).hexdigest().upper()
+        sig = hashlib.md5(signature).hexdigest().upper()
         #拼接URL
         url = "https://"+self.ServerIP + ":" + self.ServerPort + "/" + self.SoftVersion + "/Accounts/" + self.AccountSid + "/QuerySubAccountByName?sig=" + sig
         #生成auth
@@ -239,7 +239,7 @@ class REST:
         self.Batch = nowdate.strftime("%Y%m%d%H%M%S")
         #生成sig
         signature = self.AccountSid + self.AccountToken + self.Batch;
-        sig = md5.new(signature).hexdigest().upper()
+        sig = hashlib.md5(signature).hexdigest().upper()
         #拼接URL
         url = "https://"+self.ServerIP + ":" + self.ServerPort + "/" + self.SoftVersion + "/Accounts/" + self.AccountSid + "/SMS/TemplateSMS?sig=" + sig
         #生成auth
@@ -307,7 +307,7 @@ class REST:
         self.Batch = nowdate.strftime("%Y%m%d%H%M%S")
         #生成sig
         signature = self.AccountSid + self.AccountToken + self.Batch;
-        sig = md5.new(signature).hexdigest().upper()
+        sig = hashlib.md5(signature).hexdigest().upper()
         #拼接URL
         url = "https://"+self.ServerIP + ":" + self.ServerPort + "/" + self.SoftVersion + "/Accounts/" + self.AccountSid + "/Calls/LandingCalls?sig=" + sig
         #生成auth
@@ -363,7 +363,7 @@ class REST:
         self.Batch = nowdate.strftime("%Y%m%d%H%M%S")
         #生成sig
         signature = self.AccountSid + self.AccountToken + self.Batch;
-        sig = md5.new(signature).hexdigest().upper()
+        sig = hashlib.md5(signature).hexdigest().upper()
         #拼接URL
         url = "https://"+self.ServerIP + ":" + self.ServerPort + "/" + self.SoftVersion + "/Accounts/" + self.AccountSid + "/Calls/VoiceVerify?sig=" + sig
         #生成auth
@@ -416,7 +416,7 @@ class REST:
         self.Batch = nowdate.strftime("%Y%m%d%H%M%S")
         #生成sig
         signature = self.AccountSid + self.AccountToken + self.Batch;
-        sig = md5.new(signature).hexdigest().upper()
+        sig = hashlib.md5(signature).hexdigest().upper()
         #拼接URL
         url = "https://"+self.ServerIP + ":" + self.ServerPort + "/" + self.SoftVersion + "/Accounts/" + self.AccountSid + "/ivr/dial?sig=" + sig
         #生成auth
@@ -461,7 +461,7 @@ class REST:
         self.Batch = nowdate.strftime("%Y%m%d%H%M%S")
         #生成sig
         signature = self.AccountSid + self.AccountToken + self.Batch;
-        sig = md5.new(signature).hexdigest().upper()
+        sig = hashlib.md5(signature).hexdigest().upper()
         #拼接URL
         url = "https://"+self.ServerIP + ":" + self.ServerPort + "/" + self.SoftVersion + "/Accounts/" + self.AccountSid + "/BillRecords?sig=" + sig
         #生成auth
@@ -511,7 +511,7 @@ class REST:
         self.Batch = nowdate.strftime("%Y%m%d%H%M%S")
         #生成sig
         signature = self.AccountSid + self.AccountToken + self.Batch;
-        sig = md5.new(signature).hexdigest().upper()
+        sig = hashlib.md5(signature).hexdigest().upper()
         #拼接URL
         url = "https://"+self.ServerIP + ":" + self.ServerPort + "/" + self.SoftVersion + "/Accounts/" + self.AccountSid + "/AccountInfo?sig=" + sig
         #生成auth
@@ -552,7 +552,7 @@ class REST:
         self.Batch = nowdate.strftime("%Y%m%d%H%M%S")
         #生成sig
         signature = self.AccountSid + self.AccountToken + self.Batch;
-        sig = md5.new(signature).hexdigest().upper()
+        sig = hashlib.md5(signature).hexdigest().upper()
         #拼接URL
         url = "https://"+self.ServerIP + ":" + self.ServerPort + "/" + self.SoftVersion + "/Accounts/" + self.AccountSid + "/SMS/QuerySMSTemplate?sig=" + sig
         #生成auth
@@ -603,7 +603,7 @@ class REST:
         self.Batch = nowdate.strftime("%Y%m%d%H%M%S")
         #生成sig
         signature = self.AccountSid + self.AccountToken + self.Batch;
-        sig = md5.new(signature).hexdigest().upper()
+        sig = hashlib.md5(signature).hexdigest().upper()
         #拼接URL
         url = "https://"+self.ServerIP + ":" + self.ServerPort + "/" + self.SoftVersion + "/Accounts/" + self.AccountSid + "/CallResult?sig=" + sig + "&callsid=" + callSid
         #生成auth
@@ -644,7 +644,7 @@ class REST:
         self.Batch = nowdate.strftime("%Y%m%d%H%M%S")
         #生成sig
         signature = self.AccountSid + self.AccountToken + self.Batch;
-        sig = md5.new(signature).hexdigest().upper()
+        sig = hashlib.md5(signature).hexdigest().upper()
         #拼接URL
         url = "https://"+self.ServerIP + ":" + self.ServerPort + "/" + self.SoftVersion + "/Accounts/" + self.AccountSid + "/ivr/call?sig=" + sig + "&callid=" + callid
         #生成auth
@@ -695,7 +695,7 @@ class REST:
         self.Batch = nowdate.strftime("%Y%m%d%H%M%S")
         #生成sig
         signature = self.AccountSid + self.AccountToken + self.Batch;
-        sig = md5.new(signature).hexdigest().upper()
+        sig = hashlib.md5(signature).hexdigest().upper()
         #拼接URL
         url = "https://"+self.ServerIP + ":" + self.ServerPort + "/" + self.SoftVersion + "/Accounts/" + self.AccountSid + "/Calls/MediaFileUpload?sig=" + sig + "&appid=" + self.AppId + "&filename=" + filename
         #生成auth
