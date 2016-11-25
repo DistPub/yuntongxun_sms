@@ -117,7 +117,7 @@ class REST:
         try:
             req.add_data(body)
         except AttributeError:
-            req.data = body
+            req.data = body.encode()
 
         try:
             res = urlopen(req);
@@ -173,7 +173,7 @@ class REST:
         try:
             req.add_data(body)
         except AttributeError:
-            req.data = body
+            req.data = body.encode()
 
         try:
             res = urlopen(req);
@@ -230,7 +230,7 @@ class REST:
         try:
             req.add_data(body)
         except AttributeError:
-            req.data = body
+            req.data = body.encode()
 
         try:
             res = urlopen(req);
@@ -292,7 +292,7 @@ class REST:
         try:
             req.add_data(body)
         except AttributeError:
-            req.data = body
+            req.data = body.encode()
 
         data=''
         try:
@@ -360,7 +360,7 @@ class REST:
         try:
             req.add_data(body)
         except AttributeError:
-            req.data = body
+            req.data = body.encode()
 
         data=''
         try:
@@ -422,7 +422,7 @@ class REST:
         try:
             req.add_data(body)
         except AttributeError:
-            req.data = body
+            req.data = body.encode()
         data=''
         try:
             res = urlopen(req);
@@ -478,7 +478,7 @@ class REST:
         try:
             req.add_data(body)
         except AttributeError:
-            req.data = body
+            req.data = body.encode()
         data=''
         try:
             res = urlopen(req);
@@ -527,7 +527,7 @@ class REST:
         try:
             req.add_data(body)
         except AttributeError:
-            req.data = body
+            req.data = body.encode()
 
         data=''
         try:
@@ -624,7 +624,7 @@ class REST:
         try:
             req.add_data(body)
         except AttributeError:
-            req.data = body
+            req.data = body.encode()
         data=''
         try:
             res = urlopen(req);
@@ -721,7 +721,7 @@ class REST:
         try:
             req.add_data(body)
         except AttributeError:
-            req.data = body
+            req.data = body.encode()
         data=''
         try:
             res = urlopen(req);
@@ -776,7 +776,7 @@ class REST:
         try:
             req.add_data(body)
         except AttributeError:
-            req.data = body
+            req.data = body.encode()
 
         try:
             res = urlopen(req);
